@@ -1,0 +1,88 @@
+/* Smooth Transitions & Component Animations for Vibrant Smiles */
+
+/* Prevent Flash of Unstyled Content (FOUC) */
+html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    opacity: 0;
+    transition: opacity 0.35s ease-out;
+}
+
+body.page-loaded {
+    opacity: 1;
+}
+
+/* Image Smooth Loading */
+img {
+    transition: opacity 0.4s ease-in-out, filter 0.4s ease-in-out;
+}
+
+img[loading="lazy"] {
+    opacity: 0;
+}
+
+img.loaded, img:not([loading="lazy"]) {
+    opacity: 1;
+}
+
+/* Smooth Entrance Scroll Animations */
+.reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stagger Delays for Cards & Grids */
+.delay-100 { transition-delay: 100ms; }
+.delay-150 { transition-delay: 150ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-250 { transition-delay: 250ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-400 { transition-delay: 400ms; }
+
+/* Interactive Card Hover Smoothness */
+.smooth-card {
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease;
+    will-change: transform, box-shadow;
+}
+
+.smooth-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 30px -10px rgba(0, 135, 103, 0.12), 0 10px 15px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Accordion Smooth Height Transition */
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease, padding 0.35s ease;
+    opacity: 0;
+}
+
+.accordion-content.is-open {
+    max-height: 400px;
+    opacity: 1;
+}
+
+/* Subtle Pulsing / Shimmer Skeleton */
+@keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
+.skeleton-shimmer {
+    background: linear-gradient(90deg, #f0f3f2 25%, #e6ebe9 50%, #f0f3f2 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.8s infinite;
+}
+

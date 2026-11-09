@@ -16,6 +16,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="transitions.css">
+    <script src="transitions.js" defer></script>
     <script>
         tailwind.config = {
             theme: {
@@ -70,12 +72,12 @@
         <section class="pt-10 pb-20 px-6">
             <div class="max-w-7xl mx-auto relative">
                 <div
-                    class="bg-[#f8fbfb] rounded-[40px] overflow-hidden flex flex-col md:flex-row items-center relative z-10 shadow-sm border border-gray-100 min-h-[600px] lg:min-h-[660px] xl:min-h-[700px]">
+                    class="bg-[#f8fbfb] rounded-[40px] overflow-hidden flex flex-col md:flex-row items-center relative z-10 shadow-sm border border-gray-100 min-h-[600px] lg:min-h-[660px] xl:min-h-[700px] reveal is-visible">
                     <!-- Text Content -->
                     <div class="md:w-1/2 p-8 sm:p-10 md:p-8 lg:p-12 xl:p-16 z-20 relative">
                         <h1
                             class="text-3xl sm:text-4xl md:text-[34px] lg:text-[44px] xl:text-6xl font-extrabold text-brand-navy leading-[1.15] mb-6 tracking-tight">
-                            <span class="inline-block whitespace-nowrap">Specialized</span><br>Dentistry with<br><span
+                            <span class="inline-block whitespace-nowrap">Specialized Dentistry</span><br>with<br><span
                                 class="text-brand-teal inline-block whitespace-nowrap">Personalised Care</span>
                         </h1>
                         <p class="text-gray-600 mb-10 max-w-md leading-relaxed text-lg">
@@ -83,7 +85,7 @@
                             a healthier tomorrow.
                         </p>
                         <a href="contact.html"
-                            class="inline-flex items-center bg-brand-teal text-white px-8 py-4 rounded-full font-semibold hover:bg-teal-700 transition-colors text-lg shadow-md">
+                            class="inline-flex items-center bg-brand-teal text-white px-8 py-4 rounded-full font-semibold hover:bg-teal-700 transition-all duration-300 hover:shadow-lg text-lg shadow-md hover:-translate-y-0.5">
                             Book an Appointment
                             <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
@@ -99,7 +101,7 @@
                         <div
                             class="absolute inset-0 bg-gradient-to-r from-[#f8fbfb] via-[#f8fbfb]/30 to-transparent z-10 w-1/4 pointer-events-none">
                         </div>
-                        <img src="Hero image.png" alt="Dental Care" class="h-full w-auto object-contain object-bottom">
+                        <img src="Hero image.png" alt="Dental Care" fetchpriority="high" class="h-full w-auto object-contain object-bottom">
                     </div>
                     <!-- Mobile Image fallback -->
                     <div
@@ -109,9 +111,9 @@
                 </div>
 
                 <!-- USP Strip -->
-                <div class="relative z-20 max-w-5xl mx-auto -mt-12 px-6">
+                <div class="relative z-20 max-w-5xl mx-auto -mt-12 px-6 reveal delay-150">
                     <div
-                        class="bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] p-6 flex flex-wrap justify-between items-center gap-4">
+                        class="bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] p-6 flex flex-wrap justify-between items-center gap-4 border border-gray-100 smooth-card">
                         <div class="flex items-center text-sm font-semibold text-brand-navy"><svg
                                 class="w-5 h-5 text-brand-teal mr-2" fill="none" stroke="currentColor"
                                 viewBox="0 0 24 24">
@@ -145,7 +147,7 @@
         </section>
 
         <!-- Services Section -->
-        <section class="py-16 px-6 max-w-7xl mx-auto">
+        <section class="py-16 px-6 max-w-7xl mx-auto reveal">
             <div class="text-center mb-16">
                 <h2 class="text-4xl font-bold text-brand-navy mb-4">Our Services</h2>
                 <p class="text-gray-600 max-w-2xl mx-auto">Comprehensive dental care for the whole family under one
@@ -153,40 +155,40 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch justify-start">
-                <div class="bg-white rounded-[30px] overflow-hidden shadow-sm hover:shadow-lg transition-all h-full">
-                    <img src="cosmetic dentistry.webp" alt="Cosmetic Dentistry" class="h-56 w-full object-cover">
+                <div class="bg-white rounded-[30px] overflow-hidden shadow-sm hover:shadow-lg transition-all h-full smooth-card reveal delay-100">
+                    <img src="cosmetic dentistry.webp" alt="Cosmetic Dentistry" loading="lazy" class="h-56 w-full object-cover">
                     <div class="p-8">
                         <h3 class="text-xl font-bold text-brand-navy mb-3">Cosmetic & Aesthetics</h3>
                         <p class="text-gray-600 text-sm">Smile Design, Veneers, Teeth Whitening, and Composite Bonding.
                         </p>
                     </div>
                 </div>
-                <div class="bg-white rounded-[30px] overflow-hidden shadow-sm hover:shadow-lg transition-all h-full">
-                    <img src="Restorative.webp" alt="Restorative Dentistry" class="h-56 w-full object-cover">
+                <div class="bg-white rounded-[30px] overflow-hidden shadow-sm hover:shadow-lg transition-all h-full smooth-card reveal delay-150">
+                    <img src="Restorative.webp" alt="Restorative Dentistry" loading="lazy" class="h-56 w-full object-cover">
                     <div class="p-8">
                         <h3 class="text-xl font-bold text-brand-navy mb-3">Restorative</h3>
                         <p class="text-gray-600 text-sm">Painless Root Canal (RCT), Crowns & Bridges, and Post & Core
                             Buildups.</p>
                     </div>
                 </div>
-                <div class="bg-white rounded-[30px] overflow-hidden shadow-sm hover:shadow-lg transition-all h-full">
-                    <img src="Orthodontics.webp" alt="Orthodontics" class="h-56 w-full object-cover">
+                <div class="bg-white rounded-[30px] overflow-hidden shadow-sm hover:shadow-lg transition-all h-full smooth-card reveal delay-200">
+                    <img src="Orthodontics.webp" alt="Orthodontics" loading="lazy" class="h-56 w-full object-cover">
                     <div class="p-8">
                         <h3 class="text-xl font-bold text-brand-navy mb-3">Orthodontics</h3>
                         <p class="text-gray-600 text-sm">Dental Implants, Clear Aligners, Conventional Braces, and Gum
                             Surgeries.</p>
                     </div>
                 </div>
-                <div class="bg-white rounded-[30px] overflow-hidden shadow-sm hover:shadow-lg transition-all h-full">
-                    <img src="Preventive.webp" alt="Preventive Care" class="h-56 w-full object-cover">
+                <div class="bg-white rounded-[30px] overflow-hidden shadow-sm hover:shadow-lg transition-all h-full smooth-card reveal delay-250">
+                    <img src="Preventive.webp" alt="Preventive Care" loading="lazy" class="h-56 w-full object-cover">
                     <div class="p-8">
                         <h3 class="text-xl font-bold text-brand-navy mb-3">Preventive</h3>
                         <p class="text-gray-600 text-sm">Ultrasonic Cleaning & Polishing, Cavity Fillings, and Digital
                             Checkups.</p>
                     </div>
                 </div>
-                <div class="bg-white rounded-[30px] overflow-hidden shadow-sm hover:shadow-lg transition-all h-full">
-                    <img src="paediatric dentistry.webp" alt="Pediatric Care" class="h-56 w-full object-cover">
+                <div class="bg-white rounded-[30px] overflow-hidden shadow-sm hover:shadow-lg transition-all h-full smooth-card reveal delay-300">
+                    <img src="paediatric dentistry.webp" alt="Pediatric Care" loading="lazy" class="h-56 w-full object-cover">
                     <div class="p-8">
                         <h3 class="text-xl font-bold text-brand-navy mb-3">Pediatric Care</h3>
                         <p class="text-gray-600 text-sm">Fluoride Application, Dental Sealants, Complete & Partial
@@ -207,9 +209,9 @@
         </section>
 
         <!-- About & Stats Section -->
-        <section class="py-20 px-6 max-w-7xl mx-auto">
+        <section class="py-20 px-6 max-w-7xl mx-auto reveal">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                <div class="order-2 lg:order-1">
+                <div class="order-2 lg:order-1 reveal delay-100">
                     <h4 class="text-brand-teal font-bold uppercase tracking-wider text-sm mb-2">About Us</h4>
                     <h2 class="text-4xl font-bold text-brand-navy mb-6 leading-tight">We deliver personalized dental
                         care with compassion and advanced technology.</h2>
@@ -217,22 +219,22 @@
                         well-being, keeping pace with advancements in modern dentistry to improve treatment precision,
                         patient comfort and clinical outcomes.</p>
                     <a href="about.html"
-                        class="inline-flex items-center bg-brand-teal text-white px-6 py-3 rounded-full font-medium hover:bg-teal-700 transition-colors">
+                        class="inline-flex items-center bg-brand-teal text-white px-6 py-3 rounded-full font-medium hover:bg-teal-700 transition-all duration-300 hover:shadow-md hover:-translate-y-0.5">
                         Learn More About Us
                     </a>
                 </div>
-                <div class="order-1 lg:order-2 bg-white p-4 rounded-[40px] shadow-lg relative group">
+                <div class="order-1 lg:order-2 bg-white p-4 rounded-[40px] shadow-lg relative group smooth-card reveal delay-200">
                     <div
                         class="absolute inset-0 bg-brand-teal opacity-0 group-hover:opacity-10 rounded-[40px] transition-opacity duration-300">
                     </div>
-                    <img src="Clinic.webp" alt="State of the Art Dental Clinic"
+                    <img src="Clinic.webp" alt="State of the Art Dental Clinic" loading="lazy"
                         class="rounded-[32px] w-full h-[400px] object-cover">
                 </div>
             </div>
 
             <!-- Updated NavikX-style Experience Strip -->
             <div
-                class="bg-white rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-gray-50 p-8 md:p-10 mt-20 flex flex-wrap justify-between items-center gap-8">
+                class="bg-white rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-gray-50 p-8 md:p-10 mt-20 flex flex-wrap justify-between items-center gap-8 reveal delay-150 smooth-card">
                 <div class="flex items-center gap-4">
                     <div
                         class="w-14 h-14 rounded-full bg-brand-teal/10 flex items-center justify-center text-brand-teal">

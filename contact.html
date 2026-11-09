@@ -12,6 +12,8 @@
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="transitions.css">
+    <script src="transitions.js" defer></script>
     <script>
         tailwind.config = {
             theme: {
@@ -55,7 +57,7 @@
 
     <main class="min-h-screen">
 
-<div class="bg-brand-navy pt-20 pb-16 px-6 text-center text-white">
+<div class="bg-brand-navy pt-20 pb-16 px-6 text-center text-white reveal is-visible">
     <h1 class="text-4xl font-bold mb-4">Get in Touch</h1>
     <p class="text-gray-300 max-w-2xl mx-auto">We are here to answer your questions and help you schedule your visit.</p>
 </div>
@@ -63,8 +65,8 @@
 <section class="py-16 px-6 max-w-7xl mx-auto">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
         <!-- Form Column -->
-        <div class="flex flex-col gap-6">
-            <div class="bg-white p-8 md:p-10 rounded-3xl shadow-lg border border-gray-100">
+        <div class="flex flex-col gap-6 reveal delay-100">
+            <div class="bg-white p-8 md:p-10 rounded-3xl shadow-lg border border-gray-100 smooth-card">
                 <h2 class="text-2xl font-bold text-brand-navy mb-6">Request an Appointment</h2>
                 <form class="space-y-5">
                     <div>
@@ -91,13 +93,13 @@
                             <option>Pediatric Dental Care</option>
                         </select>
                     </div>
-                    <button type="submit" class="w-full bg-brand-teal text-white py-4 rounded-xl font-bold hover:bg-teal-700 transition-colors shadow-md mt-4">
+                    <button type="submit" class="w-full bg-brand-teal text-white py-4 rounded-xl font-bold hover:bg-teal-700 transition-all duration-300 shadow-md mt-4 hover:-translate-y-0.5">
                         Submit Request
                     </button>
                 </form>
             </div>
             
-            <a href="https://wa.me/919606162828" target="_blank" class="bg-[#25D366] text-white p-6 rounded-3xl shadow-lg flex items-center justify-center hover:bg-[#20bd5a] transition-colors">
+            <a href="https://wa.me/919606162828" target="_blank" class="bg-[#25D366] text-white p-6 rounded-3xl shadow-lg flex items-center justify-center hover:bg-[#20bd5a] transition-all duration-300 smooth-card">
                 <svg class="w-8 h-8 mr-3" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 0C5.405 0 0 5.4 0 12.016 0 14.135.553 16.183 1.548 17.971L.004 23.613l5.776-1.516c1.721.905 3.659 1.381 5.674 1.381 6.626 0 12.03-5.4 12.03-12.016S18.657 0 12.031 0zM17.518 16.59c-.234.66-1.353 1.258-1.928 1.365-.541.1-1.259.155-3.535-.78-2.738-1.124-4.512-3.92-4.654-4.11-.14-.19-1.111-1.482-1.111-2.83 0-1.347.697-2.013.948-2.285.25-.272.545-.34.726-.34.181 0 .362.002.518.01.168.007.393-.062.6.438.221.528.726 1.77.79 1.898.064.128.106.279.035.42-.07.14-.106.228-.212.355-.106.128-.223.267-.317.355-.106.105-.218.22-.095.433.123.213.548.908 1.18 1.468.814.722 1.5.94 1.713 1.046.213.107.337.09.465-.054.128-.143.551-.641.698-.86.148-.22.296-.184.492-.11.196.074 1.242.585 1.455.692.213.107.355.161.408.25.053.089.053.515-.181 1.176z"></path></svg>
                 <div>
                     <div class="font-bold text-lg">Chat with us on WhatsApp</div>
@@ -106,7 +108,7 @@
         </div>
 
         <!-- Details Column -->
-        <div class="bg-white p-8 md:p-10 rounded-3xl shadow-lg border border-brand-teal">
+        <div class="bg-white p-8 md:p-10 rounded-3xl shadow-lg border border-brand-teal reveal delay-200 smooth-card">
             <div class="flex items-center justify-between mb-8">
                 <h2 class="text-2xl font-bold text-brand-navy">Clinic Details</h2>
                 <span class="bg-yellow-100 text-yellow-800 text-xs font-bold px-3 py-1 rounded-full flex items-center">
