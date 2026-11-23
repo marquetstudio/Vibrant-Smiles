@@ -42,25 +42,52 @@
             </a>
             <nav class="hidden md:flex space-x-8 items-center">
                 <a href="index.html" class="text-brand-navy hover:text-brand-teal transition-colors">Home</a>
-<a href="services.html" class="text-brand-navy hover:text-brand-teal transition-colors">Services</a>
-<a href="about.html" class="text-brand-navy hover:text-brand-teal transition-colors">About Us</a>
-<a href="articles.html" class="text-brand-navy hover:text-brand-teal transition-colors">Articles</a>
-<a href="contact.html" class="text-brand-teal font-semibold transition-colors">Contact</a>
-
+                <a href="services.html" class="text-brand-navy hover:text-brand-teal transition-colors">Services</a>
+                <a href="about.html" class="text-brand-navy hover:text-brand-teal transition-colors">About Us</a>
+                <a href="articles.html" class="text-brand-navy hover:text-brand-teal transition-colors">Articles</a>
+                <a href="contact.html" class="text-brand-teal font-semibold transition-colors">Contact</a>
             </nav>
             <a href="contact.html" class="hidden md:inline-flex bg-brand-teal text-white px-6 py-2.5 rounded-full font-medium hover:bg-teal-700 transition-colors flex items-center">
                 Book Appointment
                 <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
             </a>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="mobile-menu-btn" class="md:hidden p-2 rounded-xl text-brand-navy hover:text-brand-teal hover:bg-gray-100 transition-colors focus:outline-none" aria-label="Toggle navigation menu">
+                <svg id="hamburger-icon" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+                <svg id="close-icon" class="w-7 h-7 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-gray-100 bg-white/98 backdrop-blur-md px-6 py-5 shadow-lg transition-all duration-300">
+            <nav class="flex flex-col space-y-3">
+                <a href="index.html" class="text-brand-navy hover:text-brand-teal font-medium text-lg py-1 border-b border-gray-100 transition-colors">Home</a>
+                <a href="services.html" class="text-brand-navy hover:text-brand-teal font-medium text-lg py-1 border-b border-gray-100 transition-colors">Services</a>
+                <a href="about.html" class="text-brand-navy hover:text-brand-teal font-medium text-lg py-1 border-b border-gray-100 transition-colors">About Us</a>
+                <a href="articles.html" class="text-brand-navy hover:text-brand-teal font-medium text-lg py-1 border-b border-gray-100 transition-colors">Articles</a>
+                <a href="contact.html" class="text-brand-teal font-semibold text-lg py-1 border-b border-gray-100 flex items-center justify-between">Contact <span class="text-xs text-brand-teal">●</span></a>
+                <a href="contact.html" class="inline-flex items-center justify-center bg-brand-teal text-white py-3 rounded-full font-semibold hover:bg-teal-700 transition-colors shadow-md mt-2">
+                    Book Appointment
+                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                </a>
+            </nav>
         </div>
     </header>
 
     <main class="min-h-screen">
 
-<div class="bg-brand-navy pt-20 pb-16 px-6 text-center text-white reveal is-visible">
-    <h1 class="text-4xl font-bold mb-4">Get in Touch</h1>
-    <p class="text-gray-300 max-w-2xl mx-auto">We are here to answer your questions and help you schedule your visit.</p>
-</div>
+        <!-- Page Header -->
+        <div class="text-center pt-16 pb-12 px-6 reveal is-visible">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-brand-navy mb-4 tracking-tight">Get in Touch</h1>
+            <p class="text-gray-600 max-w-2xl mx-auto text-base md:text-lg leading-relaxed">
+                We are here to answer your questions, ease your concerns, and help you schedule your appointment with Dr. Karthiyayini Priya.
+            </p>
+        </div>
 
 <section class="py-16 px-6 max-w-7xl mx-auto">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -68,43 +95,40 @@
         <div class="flex flex-col gap-6 reveal delay-100">
             <div class="bg-white p-8 md:p-10 rounded-3xl shadow-lg border border-gray-100 smooth-card">
                 <h2 class="text-2xl font-bold text-brand-navy mb-6">Request an Appointment</h2>
-                <form class="space-y-5">
+                <form id="appointment-form" class="space-y-5">
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
-                        <input type="text" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-brand-teal focus:border-brand-teal outline-none transition-all">
+                        <label for="patient-name" class="block text-sm font-medium text-gray-700 mb-1">Full Name *</label>
+                        <input type="text" id="patient-name" required placeholder="Enter your full name" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-brand-teal focus:border-brand-teal outline-none transition-all">
                     </div>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
                         <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
-                            <input type="tel" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-brand-teal focus:border-brand-teal outline-none transition-all">
+                            <label for="patient-phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number *</label>
+                            <input type="tel" id="patient-phone" required placeholder="Mobile number" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-brand-teal focus:border-brand-teal outline-none transition-all">
                         </div>
                         <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-1">Preferred Date</label>
-                            <input type="date" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-brand-teal focus:border-brand-teal outline-none transition-all">
+                            <label for="preferred-date" class="block text-sm font-medium text-gray-700 mb-1">Preferred Date</label>
+                            <input type="date" id="preferred-date" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-brand-teal focus:border-brand-teal outline-none transition-all">
                         </div>
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">Reason for Visit / Treatment</label>
-                        <select class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-brand-teal focus:border-brand-teal outline-none transition-all bg-white">
-                            <option>General Checkup / Cleaning</option>
-                            <option>Cosmetic Consultation</option>
-                            <option>Root Canal / Pain Relief</option>
-                            <option>Orthodontics / Aligners</option>
-                            <option>Pediatric Dental Care</option>
+                        <label for="service-select" class="block text-sm font-medium text-gray-700 mb-1">Reason for Visit / Treatment</label>
+                        <select id="service-select" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-brand-teal focus:border-brand-teal outline-none transition-all bg-white">
+                            <option value="General Checkup / Preventive Cleaning">General Checkup / Preventive Cleaning</option>
+                            <option value="Cosmetic & Smile Makeover">Cosmetic & Smile Makeover</option>
+                            <option value="Root Canal (RCT) / Tooth Restoration">Root Canal (RCT) / Tooth Restoration</option>
+                            <option value="Orthodontics & Braces">Orthodontics & Braces</option>
+                            <option value="Pediatric Dental Care">Pediatric Dental Care</option>
+                            <option value="Dental Implants">Dental Implants</option>
+                            <option value="Clear Aligners - Invisalign">Clear Aligners - Invisalign</option>
+                            <option value="Advanced Laser Treatment">Advanced Laser Treatment</option>
                         </select>
                     </div>
-                    <button type="submit" class="w-full bg-brand-teal text-white py-4 rounded-xl font-bold hover:bg-teal-700 transition-all duration-300 shadow-md mt-4 hover:-translate-y-0.5">
-                        Submit Request
+                    <button type="submit" class="w-full bg-[#25D366] text-white py-4 rounded-xl font-bold hover:bg-[#20bd5a] transition-all duration-300 shadow-md mt-4 hover:-translate-y-0.5 flex items-center justify-center gap-2 text-base sm:text-lg">
+                        <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M12.031 0C5.405 0 0 5.4 0 12.016 0 14.135.553 16.183 1.548 17.971L.004 23.613l5.776-1.516c1.721.905 3.659 1.381 5.674 1.381 6.626 0 12.03-5.4 12.03-12.016S18.657 0 12.031 0zM17.518 16.59c-.234.66-1.353 1.258-1.928 1.365-.541.1-1.259.155-3.535-.78-2.738-1.124-4.512-3.92-4.654-4.11-.14-.19-1.111-1.482-1.111-2.83 0-1.347.697-2.013.948-2.285.25-.272.545-.34.726-.34.181 0 .362.002.518.01.168.007.393-.062.6.438.221.528.726 1.77.79 1.898.064.128.106.279.035.42-.07.14-.106.228-.212.355-.106.128-.223.267-.317.355-.106.105-.218.22-.095.433.123.213.548.908 1.18 1.468.814.722 1.5.94 1.713 1.046.213.107.337.09.465-.054.128-.143.551-.641.698-.86.148-.22.296-.184.492-.11.196.074 1.242.585 1.455.692.213.107.355.161.408.25.053.089.053.515-.181 1.176z"></path></svg>
+                        <span>Book on WhatsApp</span>
                     </button>
                 </form>
             </div>
-            
-            <a href="https://wa.me/919606162828" target="_blank" class="bg-[#25D366] text-white p-6 rounded-3xl shadow-lg flex items-center justify-center hover:bg-[#20bd5a] transition-all duration-300 smooth-card">
-                <svg class="w-8 h-8 mr-3" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 0C5.405 0 0 5.4 0 12.016 0 14.135.553 16.183 1.548 17.971L.004 23.613l5.776-1.516c1.721.905 3.659 1.381 5.674 1.381 6.626 0 12.03-5.4 12.03-12.016S18.657 0 12.031 0zM17.518 16.59c-.234.66-1.353 1.258-1.928 1.365-.541.1-1.259.155-3.535-.78-2.738-1.124-4.512-3.92-4.654-4.11-.14-.19-1.111-1.482-1.111-2.83 0-1.347.697-2.013.948-2.285.25-.272.545-.34.726-.34.181 0 .362.002.518.01.168.007.393-.062.6.438.221.528.726 1.77.79 1.898.064.128.106.279.035.42-.07.14-.106.228-.212.355-.106.128-.223.267-.317.355-.106.105-.218.22-.095.433.123.213.548.908 1.18 1.468.814.722 1.5.94 1.713 1.046.213.107.337.09.465-.054.128-.143.551-.641.698-.86.148-.22.296-.184.492-.11.196.074 1.242.585 1.455.692.213.107.355.161.408.25.053.089.053.515-.181 1.176z"></path></svg>
-                <div>
-                    <div class="font-bold text-lg">Chat with us on WhatsApp</div>
-                </div>
-            </a>
         </div>
 
         <!-- Details Column -->
@@ -133,7 +157,17 @@
                     </div>
                     <div>
                         <h4 class="text-sm font-semibold text-gray-500 uppercase tracking-wide">Primary Phone</h4>
-                        <p class="text-brand-navy font-bold text-lg mt-1">096061 62828</p>
+                        <p class="text-brand-navy font-bold text-lg mt-1"><a href="tel:09606162828" class="hover:text-brand-teal transition-colors">096061 62828</a></p>
+                    </div>
+                </div>
+
+                <div class="flex">
+                    <div class="bg-brand-teal/10 p-3 rounded-full h-12 w-12 flex items-center justify-center text-brand-teal mr-4 shrink-0">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-500 uppercase tracking-wide">Email</h4>
+                        <p class="text-brand-navy font-bold text-base mt-1"><a href="mailto:vibrantsmilesjakkur@gmail.com" class="hover:text-brand-teal transition-colors">vibrantsmilesjakkur@gmail.com</a></p>
                     </div>
                 </div>
                 
@@ -179,7 +213,7 @@
                 <div class="bg-white inline-block p-4 rounded-xl mb-6">
                     <img src="Vibrant Smiles logo.png" alt="Vibrant Smiles Dental Clinic" class="h-12 w-auto object-contain">
                 </div>
-                <p class="text-gray-300 max-w-md">Experience the perfect blend of advanced dental technology and personalized attention. Our mission is to help you achieve a confident, healthy smile in a relaxing, comfortable environment.</p>
+                <p class="text-gray-300 max-w-md">Comprehensive dental care for children, adults, and senior citizens. Advanced technology for a healthier tomorrow.</p>
             </div>
             <div>
                 <h4 class="text-lg font-semibold mb-6">Quick Links</h4>
@@ -194,7 +228,8 @@
                 <h4 class="text-lg font-semibold mb-6">Clinic Info</h4>
                 <ul class="space-y-3 text-gray-300 text-sm">
                     <li class="flex items-start mb-2"><span class="mr-3">📍</span> 12, Anukriti Complex, BGS Layout, 2nd Floor, KV Jairam Rd, Jakkur, Bengaluru</li>
-                    <li class="flex items-center mb-2"><span class="mr-3">📞</span> 096061 62828</li>
+                    <li class="flex items-center mb-2"><span class="mr-3">📞</span> <a href="tel:09606162828" class="hover:text-brand-teal transition-colors">096061 62828</a></li>
+                    <li class="flex items-center mb-2"><span class="mr-3">✉️</span> <a href="mailto:vibrantsmilesjakkur@gmail.com" class="hover:text-brand-teal transition-colors">vibrantsmilesjakkur@gmail.com</a></li>
                     <li class="flex items-center"><span class="mr-3">🕒</span> Mon-Sat: 10:00 AM – 7:00 PM</li>
                 </ul>
             </div>
@@ -203,5 +238,49 @@
             &copy; 2026 Vibrant Smiles Dental Clinic. All rights reserved.
         </div>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Pre-select service from URL parameter (e.g., ?service=cosmetic)
+            const params = new URLSearchParams(window.location.search);
+            const serviceKey = params.get('service');
+            if (serviceKey) {
+                const select = document.getElementById('service-select');
+                if (select) {
+                    for (let option of select.options) {
+                        if (option.value.toLowerCase().includes(serviceKey.toLowerCase())) {
+                            option.selected = true;
+                            break;
+                        }
+                    }
+                }
+            }
+
+            // WhatsApp Appointment Form Submission
+            const form = document.getElementById('appointment-form');
+            if (form) {
+                form.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const name = document.getElementById('patient-name').value.trim();
+                    const phone = document.getElementById('patient-phone').value.trim();
+                    const date = document.getElementById('preferred-date').value;
+                    const select = document.getElementById('service-select');
+                    const serviceName = select ? select.options[select.selectedIndex].value : '';
+
+                    let message = `Hello Vibrant Smiles, I would like to book an appointment.\n\n`;
+                    message += `*Full Name:* ${name}\n`;
+                    message += `*Phone:* ${phone}\n`;
+                    if (date) {
+                        message += `*Preferred Date:* ${date}\n`;
+                    }
+                    if (serviceName) {
+                        message += `*Reason / Treatment:* ${serviceName}\n`;
+                    }
+
+                    const whatsappUrl = `https://wa.me/919606162828?text=${encodeURIComponent(message)}`;
+                    window.open(whatsappUrl, '_blank');
+                });
+            }
+        });
+    </script>
 </body>
 </html>

@@ -74,15 +74,46 @@ img.loaded, img:not([loading="lazy"]) {
     opacity: 1;
 }
 
-/* Subtle Pulsing / Shimmer Skeleton */
-@keyframes shimmer {
-    0% { background-position: -200% 0; }
-    100% { background-position: 200% 0; }
+/* Testimonial Marquee Auto-Scroll */
+@keyframes marquee {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-50%); }
 }
 
-.skeleton-shimmer {
-    background: linear-gradient(90deg, #f0f3f2 25%, #e6ebe9 50%, #f0f3f2 75%);
-    background-size: 200% 100%;
-    animation: shimmer 1.8s infinite;
+.marquee-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
 }
+
+.marquee-track {
+    display: flex;
+    width: max-content;
+    animation: marquee 40s linear infinite;
+    will-change: transform;
+}
+
+.marquee-container:hover .marquee-track,
+.marquee-track:hover {
+    animation-play-state: paused !important;
+}
+
+/* Subtle gradient edge masks for marquee */
+.marquee-mask {
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 80px;
+    z-index: 10;
+}
+.marquee-mask-left {
+    left: 0;
+    background: linear-gradient(to right, #F8FAFC, transparent);
+}
+.marquee-mask-right {
+    right: 0;
+    background: linear-gradient(to left, #F8FAFC, transparent);
+}
+
 

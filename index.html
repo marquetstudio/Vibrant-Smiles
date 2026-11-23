@@ -52,7 +52,6 @@
                 <a href="about.html" class="text-brand-navy hover:text-brand-teal transition-colors">About Us</a>
                 <a href="articles.html" class="text-brand-navy hover:text-brand-teal transition-colors">Articles</a>
                 <a href="contact.html" class="text-brand-navy hover:text-brand-teal transition-colors">Contact</a>
-
             </nav>
             <a href="contact.html"
                 class="hidden md:inline-flex bg-brand-teal text-white px-6 py-2.5 rounded-full font-medium hover:bg-teal-700 transition-colors flex items-center">
@@ -63,6 +62,31 @@
                     </path>
                 </svg>
             </a>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="mobile-menu-btn" class="md:hidden p-2 rounded-xl text-brand-navy hover:text-brand-teal hover:bg-gray-100 transition-colors focus:outline-none" aria-label="Toggle navigation menu">
+                <svg id="hamburger-icon" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+                <svg id="close-icon" class="w-7 h-7 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-gray-100 bg-white/98 backdrop-blur-md px-6 py-5 shadow-lg transition-all duration-300">
+            <nav class="flex flex-col space-y-3">
+                <a href="index.html" class="text-brand-teal font-semibold text-lg py-1 border-b border-gray-100 flex items-center justify-between">Home <span class="text-xs text-brand-teal">●</span></a>
+                <a href="services.html" class="text-brand-navy hover:text-brand-teal font-medium text-lg py-1 border-b border-gray-100 transition-colors">Services</a>
+                <a href="about.html" class="text-brand-navy hover:text-brand-teal font-medium text-lg py-1 border-b border-gray-100 transition-colors">About Us</a>
+                <a href="articles.html" class="text-brand-navy hover:text-brand-teal font-medium text-lg py-1 border-b border-gray-100 transition-colors">Articles</a>
+                <a href="contact.html" class="text-brand-navy hover:text-brand-teal font-medium text-lg py-1 border-b border-gray-100 transition-colors">Contact</a>
+                <a href="contact.html" class="inline-flex items-center justify-center bg-brand-teal text-white py-3 rounded-full font-semibold hover:bg-teal-700 transition-colors shadow-md mt-2">
+                    Book Appointment
+                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                </a>
+            </nav>
         </div>
     </header>
 
@@ -72,13 +96,13 @@
         <section class="pt-10 pb-20 px-6">
             <div class="max-w-7xl mx-auto relative">
                 <div
-                    class="bg-[#f8fbfb] rounded-[40px] overflow-hidden flex flex-col md:flex-row items-center relative z-10 shadow-sm border border-gray-100 min-h-[600px] lg:min-h-[660px] xl:min-h-[700px] reveal is-visible">
+                    class="bg-[#f8fbfb] rounded-[40px] overflow-hidden flex flex-col md:flex-row items-center relative z-10 shadow-sm border border-gray-100 min-h-[620px] lg:min-h-[680px] xl:min-h-[720px] reveal is-visible">
                     <!-- Text Content -->
-                    <div class="md:w-1/2 p-8 sm:p-10 md:p-8 lg:p-12 xl:p-16 z-20 relative">
+                    <div class="md:w-7/12 lg:w-1/2 p-6 sm:p-8 md:p-8 lg:p-10 xl:p-14 z-20 relative">
                         <h1
-                            class="text-3xl sm:text-4xl md:text-[34px] lg:text-[44px] xl:text-6xl font-extrabold text-brand-navy leading-[1.15] mb-6 tracking-tight">
-                            <span class="inline-block whitespace-nowrap">Specialized Dentistry</span><br>with<br><span
-                                class="text-brand-teal inline-block whitespace-nowrap">Personalised Care</span>
+                            class="text-2xl sm:text-3xl md:text-[28px] lg:text-[38px] xl:text-[46px] 2xl:text-[50px] font-extrabold text-brand-navy leading-snug sm:leading-tight mb-6 tracking-tight">
+                            <span class="block whitespace-nowrap">Specialised Dentistry with</span>
+                            <span class="block text-brand-teal whitespace-nowrap mt-2.5 sm:mt-3.5 lg:mt-4">Personalised Care</span>
                         </h1>
                         <p class="text-gray-600 mb-10 max-w-md leading-relaxed text-lg">
                             Comprehensive dental care for children, adults, and senior citizens. Advanced technology for
@@ -96,17 +120,17 @@
 
                     <!-- Image with Fade Mask -->
                     <div
-                        class="md:w-1/2 absolute right-0 top-0 bottom-0 z-10 hidden md:flex items-end justify-end overflow-hidden">
+                        class="md:w-1/2 absolute right-0 top-0 bottom-0 z-10 hidden md:flex items-end justify-end overflow-hidden pt-8 pr-4 lg:pr-8">
                         <!-- Gradient overlay to blend image seamlessly into the left background -->
                         <div
                             class="absolute inset-0 bg-gradient-to-r from-[#f8fbfb] via-[#f8fbfb]/30 to-transparent z-10 w-1/4 pointer-events-none">
                         </div>
-                        <img src="Hero image.png" alt="Dental Care" fetchpriority="high" class="h-full w-auto object-contain object-bottom">
+                        <img src="Hero image.png" alt="Dental Care" fetchpriority="high" class="h-full max-h-[92%] w-auto object-contain object-bottom">
                     </div>
                     <!-- Mobile Image fallback -->
                     <div
-                        class="w-full h-80 sm:h-96 md:hidden relative z-10 flex justify-center items-end overflow-hidden">
-                        <img src="Hero image.png" alt="Dental Care" class="h-full w-auto object-contain object-bottom">
+                        class="w-full h-80 sm:h-96 md:hidden relative z-10 flex justify-center items-end overflow-hidden pt-6">
+                        <img src="Hero image.png" alt="Dental Care" class="h-full max-h-[92%] w-auto object-contain object-bottom">
                     </div>
                 </div>
 
@@ -155,46 +179,76 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch justify-start">
-                <div class="bg-white rounded-[30px] overflow-hidden shadow-sm hover:shadow-lg transition-all h-full smooth-card reveal delay-100">
-                    <img src="cosmetic dentistry.webp" alt="Cosmetic Dentistry" loading="lazy" class="h-56 w-full object-cover">
+                <a href="services.html#cosmetic" class="block bg-white rounded-[30px] overflow-hidden shadow-sm hover:shadow-lg transition-all h-full smooth-card reveal delay-100 group">
+                    <img src="cosmetic dentistry.webp" alt="Cosmetic Dentistry" loading="lazy" class="h-56 w-full object-cover group-hover:scale-105 transition-transform duration-500">
                     <div class="p-8">
-                        <h3 class="text-xl font-bold text-brand-navy mb-3">Cosmetic & Aesthetics</h3>
-                        <p class="text-gray-600 text-sm">Smile Design, Veneers, Teeth Whitening, and Composite Bonding.
-                        </p>
+                        <h3 class="text-xl font-bold text-brand-navy mb-3 group-hover:text-brand-teal transition-colors">Cosmetic & Aesthetics</h3>
+                        <p class="text-gray-600 text-sm">Smile Design, Porcelain Veneers, Teeth Whitening, and Composite Bonding.</p>
+                        <span class="inline-flex items-center text-xs font-semibold text-brand-teal mt-4">Learn More →</span>
                     </div>
-                </div>
-                <div class="bg-white rounded-[30px] overflow-hidden shadow-sm hover:shadow-lg transition-all h-full smooth-card reveal delay-150">
-                    <img src="Restorative.webp" alt="Restorative Dentistry" loading="lazy" class="h-56 w-full object-cover">
+                </a>
+                <a href="services.html#restorative" class="block bg-white rounded-[30px] overflow-hidden shadow-sm hover:shadow-lg transition-all h-full smooth-card reveal delay-150 group">
+                    <img src="Restorative.webp" alt="Restorative Dentistry" loading="lazy" class="h-56 w-full object-cover group-hover:scale-105 transition-transform duration-500">
                     <div class="p-8">
-                        <h3 class="text-xl font-bold text-brand-navy mb-3">Restorative</h3>
-                        <p class="text-gray-600 text-sm">Painless Root Canal (RCT), Crowns & Bridges, and Post & Core
-                            Buildups.</p>
+                        <h3 class="text-xl font-bold text-brand-navy mb-3 group-hover:text-brand-teal transition-colors">Restorative & RCT</h3>
+                        <p class="text-gray-600 text-sm">Painless Single-Sitting Root Canal, Zirconia Crowns & Bridges, and Inlays.</p>
+                        <span class="inline-flex items-center text-xs font-semibold text-brand-teal mt-4">Learn More →</span>
                     </div>
-                </div>
-                <div class="bg-white rounded-[30px] overflow-hidden shadow-sm hover:shadow-lg transition-all h-full smooth-card reveal delay-200">
-                    <img src="Orthodontics.webp" alt="Orthodontics" loading="lazy" class="h-56 w-full object-cover">
+                </a>
+                <a href="services.html#orthodontics" class="block bg-white rounded-[30px] overflow-hidden shadow-sm hover:shadow-lg transition-all h-full smooth-card reveal delay-200 group">
+                    <img src="Orthodontics.webp" alt="Orthodontics" loading="lazy" class="h-56 w-full object-cover group-hover:scale-105 transition-transform duration-500">
                     <div class="p-8">
-                        <h3 class="text-xl font-bold text-brand-navy mb-3">Orthodontics</h3>
-                        <p class="text-gray-600 text-sm">Dental Implants, Clear Aligners, Conventional Braces, and Gum
-                            Surgeries.</p>
+                        <h3 class="text-xl font-bold text-brand-navy mb-3 group-hover:text-brand-teal transition-colors">Orthodontics</h3>
+                        <p class="text-gray-600 text-sm">Conventional Metal & Ceramic Braces, Self-Ligating Brackets, and Bite Alignment.</p>
+                        <span class="inline-flex items-center text-xs font-semibold text-brand-teal mt-4">Learn More →</span>
                     </div>
-                </div>
-                <div class="bg-white rounded-[30px] overflow-hidden shadow-sm hover:shadow-lg transition-all h-full smooth-card reveal delay-250">
-                    <img src="Preventive.webp" alt="Preventive Care" loading="lazy" class="h-56 w-full object-cover">
+                </a>
+                <a href="services.html#preventive" class="block bg-white rounded-[30px] overflow-hidden shadow-sm hover:shadow-lg transition-all h-full smooth-card reveal delay-250 group">
+                    <img src="Preventive.webp" alt="Preventive Care" loading="lazy" class="h-56 w-full object-cover group-hover:scale-105 transition-transform duration-500">
                     <div class="p-8">
-                        <h3 class="text-xl font-bold text-brand-navy mb-3">Preventive</h3>
-                        <p class="text-gray-600 text-sm">Ultrasonic Cleaning & Polishing, Cavity Fillings, and Digital
-                            Checkups.</p>
+                        <h3 class="text-xl font-bold text-brand-navy mb-3 group-hover:text-brand-teal transition-colors">Preventive Care</h3>
+                        <p class="text-gray-600 text-sm">Ultrasonic Scaling & Polishing, Cavity Fillings, and Digital RVG Checkups.</p>
+                        <span class="inline-flex items-center text-xs font-semibold text-brand-teal mt-4">Learn More →</span>
                     </div>
-                </div>
-                <div class="bg-white rounded-[30px] overflow-hidden shadow-sm hover:shadow-lg transition-all h-full smooth-card reveal delay-300">
-                    <img src="paediatric dentistry.webp" alt="Pediatric Care" loading="lazy" class="h-56 w-full object-cover">
+                </a>
+                <a href="services.html#pediatric" class="block bg-white rounded-[30px] overflow-hidden shadow-sm hover:shadow-lg transition-all h-full smooth-card reveal delay-300 group">
+                    <img src="paediatric dentistry.webp" alt="Pediatric Care" loading="lazy" class="h-56 w-full object-cover group-hover:scale-105 transition-transform duration-500">
                     <div class="p-8">
-                        <h3 class="text-xl font-bold text-brand-navy mb-3">Pediatric Care</h3>
-                        <p class="text-gray-600 text-sm">Fluoride Application, Dental Sealants, Complete & Partial
-                            Dentures.</p>
+                        <h3 class="text-xl font-bold text-brand-navy mb-3 group-hover:text-brand-teal transition-colors">Pediatric Care</h3>
+                        <p class="text-gray-600 text-sm">Gentle Children's Dentistry, Fluoride Application, Pit & Fissure Sealants.</p>
+                        <span class="inline-flex items-center text-xs font-semibold text-brand-teal mt-4">Learn More →</span>
                     </div>
-                </div>
+                </a>
+
+                <!-- 6. Dental Implants -->
+                <a href="services.html#implants" class="block bg-white rounded-[30px] overflow-hidden shadow-sm hover:shadow-lg transition-all h-full smooth-card reveal delay-100 group">
+                    <img src="dental implants.webp" alt="Dental Implants" loading="lazy" class="h-56 w-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="p-8">
+                        <h3 class="text-xl font-bold text-brand-navy mb-3 group-hover:text-brand-teal transition-colors">Dental Implants</h3>
+                        <p class="text-gray-600 text-sm">Permanent, natural-looking tooth replacement with biocompatible titanium posts and custom crowns.</p>
+                        <span class="inline-flex items-center text-xs font-semibold text-brand-teal mt-4">Learn More →</span>
+                    </div>
+                </a>
+
+                <!-- 7. Clear Aligners - Invisalign -->
+                <a href="services.html#aligners" class="block bg-white rounded-[30px] overflow-hidden shadow-sm hover:shadow-lg transition-all h-full smooth-card reveal delay-150 group">
+                    <img src="clear aligners.webp" alt="Clear Aligners - Invisalign" loading="lazy" class="h-56 w-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="p-8">
+                        <h3 class="text-xl font-bold text-brand-navy mb-3 group-hover:text-brand-teal transition-colors">Clear Aligners - Invisalign</h3>
+                        <p class="text-gray-600 text-sm">Discreet, removable custom aligners engineered to straighten teeth comfortably without metal wires.</p>
+                        <span class="inline-flex items-center text-xs font-semibold text-brand-teal mt-4">Learn More →</span>
+                    </div>
+                </a>
+
+                <!-- 8. Advanced Laser Treatments -->
+                <a href="services.html#laser" class="block bg-white rounded-[30px] overflow-hidden shadow-sm hover:shadow-lg transition-all h-full smooth-card reveal delay-200 group">
+                    <img src="laser treatment.webp" alt="Advanced Laser Treatments" loading="lazy" class="h-56 w-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="p-8">
+                        <h3 class="text-xl font-bold text-brand-navy mb-3 group-hover:text-brand-teal transition-colors">Advanced Laser Treatments</h3>
+                        <p class="text-gray-600 text-sm">Minimally invasive dental laser therapies for pain-free gum contouring, disinfection, and rapid healing.</p>
+                        <span class="inline-flex items-center text-xs font-semibold text-brand-teal mt-4">Learn More →</span>
+                    </div>
+                </a>
             </div>
 
             <div class="text-center mt-12">
@@ -297,6 +351,291 @@
             </div>
         </section>
 
+        <!-- Patient Testimonials Section (Auto-Scrolling Marquee) -->
+        <section class="py-20 bg-brand-light overflow-hidden reveal">
+            <div class="max-w-7xl mx-auto px-6 mb-12 text-center">
+                <span class="text-brand-teal text-xs sm:text-sm font-bold tracking-widest uppercase block mb-2">PATIENT STORIES</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-navy tracking-tight mb-4">What Our Patients Say</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto text-base md:text-lg">Real experiences from patients who trust Dr. Karthiyayini Priya and Vibrant Smiles for their family's dental health.</p>
+            </div>
+
+            <!-- Auto-Scrolling Marquee Container (Pauses on Hover) -->
+            <div class="marquee-container py-4">
+                <div class="marquee-mask marquee-mask-left"></div>
+                <div class="marquee-mask marquee-mask-right"></div>
+                
+                <div class="marquee-track">
+                    <!-- Cards Set 1 -->
+                    <div class="w-[340px] sm:w-[420px] shrink-0 bg-white rounded-3xl p-7 shadow-sm border border-gray-100 mx-3 smooth-card whitespace-normal flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-1 text-amber-400 mb-3 text-lg">
+                                ★★★★★
+                                <span class="text-xs text-gray-400 font-semibold ml-2">Google Review</span>
+                            </div>
+                            <p class="text-gray-700 text-sm leading-relaxed mb-6">
+                                "Visited Dr. Karthiyayini Priya today for severe tooth pain and had an exceptional experience. She is genuinely honest, caring, and completely non-commercial. She listened patiently, took an X-ray, explained the exact problem clearly, and prioritized my safety by prescribing medication first and advising proper cardiologist clearance and blood tests before proceeding with extraction. Most remarkably, she charged only &#8377;700 inclusive of consultation, X-ray, and prescription! Easily accessible right near Jakkur—highly recommend Vibrant Smiles to anyone looking for trustworthy and ethical dental care"
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-3 border-t border-gray-100 pt-4">
+                            <div class="w-10 h-10 rounded-full bg-brand-teal/10 text-brand-teal flex items-center justify-center font-bold text-sm">RC</div>
+                            <div>
+                                <div class="font-bold text-brand-navy text-sm sm:text-base">Raman Chandrasekaran</div>
+                                <div class="text-xs text-gray-500">Google Verified Patient</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-[340px] sm:w-[420px] shrink-0 bg-white rounded-3xl p-7 shadow-sm border border-gray-100 mx-3 smooth-card whitespace-normal flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-1 text-amber-400 mb-3 text-lg">
+                                ★★★★★
+                                <span class="text-xs text-gray-400 font-semibold ml-2">Google Review</span>
+                            </div>
+                            <p class="text-gray-700 text-sm leading-relaxed mb-6">
+                                "My daughter had a fall because of which she lost a part of her tooth and fall cause infection in her gum. And went through a dental surgery. Priya ma'am was so comforting to my daughter and very kind. She explained every procedure to us and I am completely satisfied. Thank you Priya ma'am and her team."
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-3 border-t border-gray-100 pt-4">
+                            <div class="w-10 h-10 rounded-full bg-brand-teal/10 text-brand-teal flex items-center justify-center font-bold text-sm">DK</div>
+                            <div>
+                                <div class="font-bold text-brand-navy text-sm sm:text-base">debashree Kar (Eshita)</div>
+                                <div class="text-xs text-gray-500">Google Verified Patient</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-[340px] sm:w-[420px] shrink-0 bg-white rounded-3xl p-7 shadow-sm border border-gray-100 mx-3 smooth-card whitespace-normal flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-1 text-amber-400 mb-3 text-lg">
+                                ★★★★★
+                                <span class="text-xs text-gray-400 font-semibold ml-2">Google Review</span>
+                            </div>
+                            <p class="text-gray-700 text-sm leading-relaxed mb-6">
+                                "I visited Vibrant Smiles Dental Care for my daughter's treatment. The clinic is very hygienic and clean. The dentists snd attender are professional and knowledgeable. The procedure was done with extensive care and patience. I highly recommend this clinic for your dentsl problems"
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-3 border-t border-gray-100 pt-4">
+                            <div class="w-10 h-10 rounded-full bg-brand-teal/10 text-brand-teal flex items-center justify-center font-bold text-sm">JT</div>
+                            <div>
+                                <div class="font-bold text-brand-navy text-sm sm:text-base">Jejabai T</div>
+                                <div class="text-xs text-gray-500">Google Verified Patient</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-[340px] sm:w-[420px] shrink-0 bg-white rounded-3xl p-7 shadow-sm border border-gray-100 mx-3 smooth-card whitespace-normal flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-1 text-amber-400 mb-3 text-lg">
+                                ★★★★★
+                                <span class="text-xs text-gray-400 font-semibold ml-2">Google Review</span>
+                            </div>
+                            <p class="text-gray-700 text-sm leading-relaxed mb-6">
+                                "Recently I visited the clinic for my wisdom teeth extraction. Dr Vishesh and his team very polite and knowledgeable. The procedure was performed with ease and had explained me post-operative signs and it's management. So, overall had a very good experience and highly recommend this clinic for any of your dental problems."
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-3 border-t border-gray-100 pt-4">
+                            <div class="w-10 h-10 rounded-full bg-brand-teal/10 text-brand-teal flex items-center justify-center font-bold text-sm">NV</div>
+                            <div>
+                                <div class="font-bold text-brand-navy text-sm sm:text-base">Nandini V</div>
+                                <div class="text-xs text-gray-500">Google Verified Patient</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-[340px] sm:w-[420px] shrink-0 bg-white rounded-3xl p-7 shadow-sm border border-gray-100 mx-3 smooth-card whitespace-normal flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-1 text-amber-400 mb-3 text-lg">
+                                ★★★★★
+                                <span class="text-xs text-gray-400 font-semibold ml-2">Google Review</span>
+                            </div>
+                            <p class="text-gray-700 text-sm leading-relaxed mb-6">
+                                "Very professional dentist, I got my root canal procedure done from Dr Vishesh. To be honest I was quite afraid however they made the whole process very easy and comfortable. I highly recommend you to visit Vibrant Smile dental care for any sort of dental issues."
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-3 border-t border-gray-100 pt-4">
+                            <div class="w-10 h-10 rounded-full bg-brand-teal/10 text-brand-teal flex items-center justify-center font-bold text-sm">UD</div>
+                            <div>
+                                <div class="font-bold text-brand-navy text-sm sm:text-base">Uma Devi</div>
+                                <div class="text-xs text-gray-500">Google Verified Patient</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-[340px] sm:w-[420px] shrink-0 bg-white rounded-3xl p-7 shadow-sm border border-gray-100 mx-3 smooth-card whitespace-normal flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-1 text-amber-400 mb-3 text-lg">
+                                ★★★★★
+                                <span class="text-xs text-gray-400 font-semibold ml-2">Google Review</span>
+                            </div>
+                            <p class="text-gray-700 text-sm leading-relaxed mb-6">
+                                "Had been here for an RC treatment. Dentist Ms Priya is extremely professional, patient and understanding. The entire treatment was completely painless and hardly had to wait on any of my visits. Cost is bang on buck. I recommend this place for my parents too who now are being treated here. Recommend Vibrant Smiles, highly."
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-3 border-t border-gray-100 pt-4">
+                            <div class="w-10 h-10 rounded-full bg-brand-teal/10 text-brand-teal flex items-center justify-center font-bold text-sm">SG</div>
+                            <div>
+                                <div class="font-bold text-brand-navy text-sm sm:text-base">Sridhar Gopal</div>
+                                <div class="text-xs text-gray-500">Google Verified Patient</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-[340px] sm:w-[420px] shrink-0 bg-white rounded-3xl p-7 shadow-sm border border-gray-100 mx-3 smooth-card whitespace-normal flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-1 text-amber-400 mb-3 text-lg">
+                                ★★★★★
+                                <span class="text-xs text-gray-400 font-semibold ml-2">Google Review</span>
+                            </div>
+                            <p class="text-gray-700 text-sm leading-relaxed mb-6">
+                                "Living with missing teeth was a challenge, but vibrant smile Dental clinics dental implants was very good. The procedure was seamless and my smile has been enhanced remarkably.. Their expert team's professionalism and moder technology is excellent. I was so comfortable during the course of the treatment. The entire team is so friendly and you feel you are priority for them."
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-3 border-t border-gray-100 pt-4">
+                            <div class="w-10 h-10 rounded-full bg-brand-teal/10 text-brand-teal flex items-center justify-center font-bold text-sm">MS</div>
+                            <div>
+                                <div class="font-bold text-brand-navy text-sm sm:text-base">Mohandas Shetty</div>
+                                <div class="text-xs text-gray-500">Google Verified Patient</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cards Set 2 (Duplicate for Seamless Infinite Loop) -->
+                    <div class="w-[340px] sm:w-[420px] shrink-0 bg-white rounded-3xl p-7 shadow-sm border border-gray-100 mx-3 smooth-card whitespace-normal flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-1 text-amber-400 mb-3 text-lg">
+                                ★★★★★
+                                <span class="text-xs text-gray-400 font-semibold ml-2">Google Review</span>
+                            </div>
+                            <p class="text-gray-700 text-sm leading-relaxed mb-6">
+                                "Visited Dr. Karthiyayini Priya today for severe tooth pain and had an exceptional experience. She is genuinely honest, caring, and completely non-commercial. She listened patiently, took an X-ray, explained the exact problem clearly, and prioritized my safety by prescribing medication first and advising proper cardiologist clearance and blood tests before proceeding with extraction. Most remarkably, she charged only &#8377;700 inclusive of consultation, X-ray, and prescription! Easily accessible right near Jakkur—highly recommend Vibrant Smiles to anyone looking for trustworthy and ethical dental care"
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-3 border-t border-gray-100 pt-4">
+                            <div class="w-10 h-10 rounded-full bg-brand-teal/10 text-brand-teal flex items-center justify-center font-bold text-sm">RC</div>
+                            <div>
+                                <div class="font-bold text-brand-navy text-sm sm:text-base">Raman Chandrasekaran</div>
+                                <div class="text-xs text-gray-500">Google Verified Patient</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-[340px] sm:w-[420px] shrink-0 bg-white rounded-3xl p-7 shadow-sm border border-gray-100 mx-3 smooth-card whitespace-normal flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-1 text-amber-400 mb-3 text-lg">
+                                ★★★★★
+                                <span class="text-xs text-gray-400 font-semibold ml-2">Google Review</span>
+                            </div>
+                            <p class="text-gray-700 text-sm leading-relaxed mb-6">
+                                "My daughter had a fall because of which she lost a part of her tooth and fall cause infection in her gum. And went through a dental surgery. Priya ma'am was so comforting to my daughter and very kind. She explained every procedure to us and I am completely satisfied. Thank you Priya ma'am and her team."
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-3 border-t border-gray-100 pt-4">
+                            <div class="w-10 h-10 rounded-full bg-brand-teal/10 text-brand-teal flex items-center justify-center font-bold text-sm">DK</div>
+                            <div>
+                                <div class="font-bold text-brand-navy text-sm sm:text-base">debashree Kar (Eshita)</div>
+                                <div class="text-xs text-gray-500">Google Verified Patient</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-[340px] sm:w-[420px] shrink-0 bg-white rounded-3xl p-7 shadow-sm border border-gray-100 mx-3 smooth-card whitespace-normal flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-1 text-amber-400 mb-3 text-lg">
+                                ★★★★★
+                                <span class="text-xs text-gray-400 font-semibold ml-2">Google Review</span>
+                            </div>
+                            <p class="text-gray-700 text-sm leading-relaxed mb-6">
+                                "I visited Vibrant Smiles Dental Care for my daughter's treatment. The clinic is very hygienic and clean. The dentists snd attender are professional and knowledgeable. The procedure was done with extensive care and patience. I highly recommend this clinic for your dentsl problems"
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-3 border-t border-gray-100 pt-4">
+                            <div class="w-10 h-10 rounded-full bg-brand-teal/10 text-brand-teal flex items-center justify-center font-bold text-sm">JT</div>
+                            <div>
+                                <div class="font-bold text-brand-navy text-sm sm:text-base">Jejabai T</div>
+                                <div class="text-xs text-gray-500">Google Verified Patient</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-[340px] sm:w-[420px] shrink-0 bg-white rounded-3xl p-7 shadow-sm border border-gray-100 mx-3 smooth-card whitespace-normal flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-1 text-amber-400 mb-3 text-lg">
+                                ★★★★★
+                                <span class="text-xs text-gray-400 font-semibold ml-2">Google Review</span>
+                            </div>
+                            <p class="text-gray-700 text-sm leading-relaxed mb-6">
+                                "Recently I visited the clinic for my wisdom teeth extraction. Dr Vishesh and his team very polite and knowledgeable. The procedure was performed with ease and had explained me post-operative signs and it's management. So, overall had a very good experience and highly recommend this clinic for any of your dental problems."
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-3 border-t border-gray-100 pt-4">
+                            <div class="w-10 h-10 rounded-full bg-brand-teal/10 text-brand-teal flex items-center justify-center font-bold text-sm">NV</div>
+                            <div>
+                                <div class="font-bold text-brand-navy text-sm sm:text-base">Nandini V</div>
+                                <div class="text-xs text-gray-500">Google Verified Patient</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-[340px] sm:w-[420px] shrink-0 bg-white rounded-3xl p-7 shadow-sm border border-gray-100 mx-3 smooth-card whitespace-normal flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-1 text-amber-400 mb-3 text-lg">
+                                ★★★★★
+                                <span class="text-xs text-gray-400 font-semibold ml-2">Google Review</span>
+                            </div>
+                            <p class="text-gray-700 text-sm leading-relaxed mb-6">
+                                "Very professional dentist, I got my root canal procedure done from Dr Vishesh. To be honest I was quite afraid however they made the whole process very easy and comfortable. I highly recommend you to visit Vibrant Smile dental care for any sort of dental issues."
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-3 border-t border-gray-100 pt-4">
+                            <div class="w-10 h-10 rounded-full bg-brand-teal/10 text-brand-teal flex items-center justify-center font-bold text-sm">UD</div>
+                            <div>
+                                <div class="font-bold text-brand-navy text-sm sm:text-base">Uma Devi</div>
+                                <div class="text-xs text-gray-500">Google Verified Patient</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-[340px] sm:w-[420px] shrink-0 bg-white rounded-3xl p-7 shadow-sm border border-gray-100 mx-3 smooth-card whitespace-normal flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-1 text-amber-400 mb-3 text-lg">
+                                ★★★★★
+                                <span class="text-xs text-gray-400 font-semibold ml-2">Google Review</span>
+                            </div>
+                            <p class="text-gray-700 text-sm leading-relaxed mb-6">
+                                "Had been here for an RC treatment. Dentist Ms Priya is extremely professional, patient and understanding. The entire treatment was completely painless and hardly had to wait on any of my visits. Cost is bang on buck. I recommend this place for my parents too who now are being treated here. Recommend Vibrant Smiles, highly."
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-3 border-t border-gray-100 pt-4">
+                            <div class="w-10 h-10 rounded-full bg-brand-teal/10 text-brand-teal flex items-center justify-center font-bold text-sm">SG</div>
+                            <div>
+                                <div class="font-bold text-brand-navy text-sm sm:text-base">Sridhar Gopal</div>
+                                <div class="text-xs text-gray-500">Google Verified Patient</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-[340px] sm:w-[420px] shrink-0 bg-white rounded-3xl p-7 shadow-sm border border-gray-100 mx-3 smooth-card whitespace-normal flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-1 text-amber-400 mb-3 text-lg">
+                                ★★★★★
+                                <span class="text-xs text-gray-400 font-semibold ml-2">Google Review</span>
+                            </div>
+                            <p class="text-gray-700 text-sm leading-relaxed mb-6">
+                                "Living with missing teeth was a challenge, but vibrant smile Dental clinics dental implants was very good. The procedure was seamless and my smile has been enhanced remarkably.. Their expert team's professionalism and moder technology is excellent. I was so comfortable during the course of the treatment. The entire team is so friendly and you feel you are priority for them."
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-3 border-t border-gray-100 pt-4">
+                            <div class="w-10 h-10 rounded-full bg-brand-teal/10 text-brand-teal flex items-center justify-center font-bold text-sm">MS</div>
+                            <div>
+                                <div class="font-bold text-brand-navy text-sm sm:text-base">Mohandas Shetty</div>
+                                <div class="text-xs text-gray-500">Google Verified Patient</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <!-- Footer -->
@@ -307,9 +646,7 @@
                     <img src="Vibrant Smiles logo.png" alt="Vibrant Smiles Dental Clinic"
                         class="h-12 w-auto object-contain">
                 </div>
-                <p class="text-gray-300 max-w-md">Experience the perfect blend of advanced dental technology and
-                    personalized attention. Our mission is to help you achieve a confident, healthy smile in a relaxing,
-                    comfortable environment.</p>
+                <p class="text-gray-300 max-w-md">Comprehensive dental care for children, adults, and senior citizens. Advanced technology for a healthier tomorrow.</p>
             </div>
             <div>
                 <h4 class="text-lg font-semibold mb-6">Quick Links</h4>
@@ -325,7 +662,8 @@
                 <ul class="space-y-3 text-gray-300 text-sm">
                     <li class="flex items-start mb-2"><span class="mr-3">📍</span> 12, Anukriti Complex, BGS Layout, 2nd
                         Floor, KV Jairam Rd, Jakkur, Bengaluru</li>
-                    <li class="flex items-center mb-2"><span class="mr-3">📞</span> 096061 62828</li>
+                    <li class="flex items-center mb-2"><span class="mr-3">📞</span> <a href="tel:09606162828" class="hover:text-brand-teal transition-colors">096061 62828</a></li>
+                    <li class="flex items-center mb-2"><span class="mr-3">✉️</span> <a href="mailto:vibrantsmilesjakkur@gmail.com" class="hover:text-brand-teal transition-colors">vibrantsmilesjakkur@gmail.com</a></li>
                     <li class="flex items-center"><span class="mr-3">🕒</span> Mon-Sat: 10:00 AM – 7:00 PM</li>
                 </ul>
             </div>

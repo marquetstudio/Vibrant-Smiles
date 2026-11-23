@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dental Treatments & Services | Vibrant Smiles Dental Clinic</title>
-    <meta name="description" content="Comprehensive dental care for the whole family including cosmetic, restorative, orthodontics, preventive, and pediatric dentistry in Bengaluru.">
+    <title>Our Services | Vibrant Smiles Dental Clinic</title>
+    <meta name="description" content="Explore our dental treatments in Bengaluru. Modern dental solutions designed around comfort, precision, and long-term oral health under Dr. Karthiyayini Priya.">
     <meta name="robots" content="index, follow">
-    <meta property="og:title" content="Dental Treatments & Services | Vibrant Smiles Dental Clinic">
-    <meta property="og:description" content="Comprehensive dental care for the whole family including cosmetic, restorative, orthodontics, preventive, and pediatric dentistry in Bengaluru.">
+    <meta property="og:title" content="Our Services | Vibrant Smiles Dental Clinic">
+    <meta property="og:description" content="From everyday checkups to advanced procedures, every treatment is planned around your comfort and delivered with precision.">
     <meta property="og:type" content="website">
     
     <script src="https://cdn.tailwindcss.com"></script>
@@ -42,66 +42,517 @@
             </a>
             <nav class="hidden md:flex space-x-8 items-center">
                 <a href="index.html" class="text-brand-navy hover:text-brand-teal transition-colors">Home</a>
-<a href="services.html" class="text-brand-teal font-semibold transition-colors">Services</a>
-<a href="about.html" class="text-brand-navy hover:text-brand-teal transition-colors">About Us</a>
-<a href="articles.html" class="text-brand-navy hover:text-brand-teal transition-colors">Articles</a>
-<a href="contact.html" class="text-brand-navy hover:text-brand-teal transition-colors">Contact</a>
-
+                <a href="services.html" class="text-brand-teal font-semibold transition-colors">Services</a>
+                <a href="about.html" class="text-brand-navy hover:text-brand-teal transition-colors">About Us</a>
+                <a href="articles.html" class="text-brand-navy hover:text-brand-teal transition-colors">Articles</a>
+                <a href="contact.html" class="text-brand-navy hover:text-brand-teal transition-colors">Contact</a>
             </nav>
             <a href="contact.html" class="hidden md:inline-flex bg-brand-teal text-white px-6 py-2.5 rounded-full font-medium hover:bg-teal-700 transition-colors flex items-center">
                 Book Appointment
                 <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
             </a>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="mobile-menu-btn" class="md:hidden p-2 rounded-xl text-brand-navy hover:text-brand-teal hover:bg-gray-100 transition-colors focus:outline-none" aria-label="Toggle navigation menu">
+                <svg id="hamburger-icon" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+                <svg id="close-icon" class="w-7 h-7 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-gray-100 bg-white/98 backdrop-blur-md px-6 py-5 shadow-lg transition-all duration-300">
+            <nav class="flex flex-col space-y-3">
+                <a href="index.html" class="text-brand-navy hover:text-brand-teal font-medium text-lg py-1 border-b border-gray-100 transition-colors">Home</a>
+                <a href="services.html" class="text-brand-teal font-semibold text-lg py-1 border-b border-gray-100 flex items-center justify-between">Services <span class="text-xs text-brand-teal">●</span></a>
+                <a href="about.html" class="text-brand-navy hover:text-brand-teal font-medium text-lg py-1 border-b border-gray-100 transition-colors">About Us</a>
+                <a href="articles.html" class="text-brand-navy hover:text-brand-teal font-medium text-lg py-1 border-b border-gray-100 transition-colors">Articles</a>
+                <a href="contact.html" class="text-brand-navy hover:text-brand-teal font-medium text-lg py-1 border-b border-gray-100 transition-colors">Contact</a>
+                <a href="contact.html" class="inline-flex items-center justify-center bg-brand-teal text-white py-3 rounded-full font-semibold hover:bg-teal-700 transition-colors shadow-md mt-2">
+                    Book Appointment
+                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                </a>
+            </nav>
         </div>
     </header>
 
     <main class="min-h-screen">
 
-<!-- Page Header -->
-<div class="bg-brand-navy pt-20 pb-16 px-6 text-center text-white reveal is-visible">
-    <h1 class="text-4xl font-bold mb-4">Treatments & Services</h1>
-    <p class="text-gray-300 max-w-2xl mx-auto">Discover our comprehensive range of clinical procedures designed to keep your smile healthy and vibrant.</p>
-</div>
+        <!-- Page Header -->
+        <section class="pt-16 pb-10 px-6 text-center reveal is-visible">
+            <div class="max-w-4xl mx-auto">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-brand-navy mb-5 tracking-tight leading-tight">
+                    Our Services
+                </h1>
+                <p class="text-gray-600 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
+                    From everyday checkups to advanced procedures, every treatment is planned around your comfort and delivered with precision.
+                </p>
+                
+                <!-- Quick Service Jump Pills -->
+                <div class="flex flex-wrap justify-center items-center gap-2 sm:gap-3 mt-8 max-w-4xl mx-auto">
+                    <a href="#cosmetic" class="text-xs sm:text-sm font-medium bg-white hover:bg-brand-teal hover:text-white text-brand-navy px-4 py-2 rounded-full border border-gray-200 shadow-sm transition-all duration-200">Cosmetic & Aesthetics</a>
+                    <a href="#restorative" class="text-xs sm:text-sm font-medium bg-white hover:bg-brand-teal hover:text-white text-brand-navy px-4 py-2 rounded-full border border-gray-200 shadow-sm transition-all duration-200">Restorative (RCT)</a>
+                    <a href="#orthodontics" class="text-xs sm:text-sm font-medium bg-white hover:bg-brand-teal hover:text-white text-brand-navy px-4 py-2 rounded-full border border-gray-200 shadow-sm transition-all duration-200">Orthodontics</a>
+                    <a href="#preventive" class="text-xs sm:text-sm font-medium bg-white hover:bg-brand-teal hover:text-white text-brand-navy px-4 py-2 rounded-full border border-gray-200 shadow-sm transition-all duration-200">Preventive Care</a>
+                    <a href="#pediatric" class="text-xs sm:text-sm font-medium bg-white hover:bg-brand-teal hover:text-white text-brand-navy px-4 py-2 rounded-full border border-gray-200 shadow-sm transition-all duration-200">Pediatric Care</a>
+                    <a href="#implants" class="text-xs sm:text-sm font-medium bg-white hover:bg-brand-teal hover:text-white text-brand-navy px-4 py-2 rounded-full border border-gray-200 shadow-sm transition-all duration-200">Dental Implants</a>
+                    <a href="#aligners" class="text-xs sm:text-sm font-medium bg-white hover:bg-brand-teal hover:text-white text-brand-navy px-4 py-2 rounded-full border border-gray-200 shadow-sm transition-all duration-200">Clear Aligners</a>
+                    <a href="#laser" class="text-xs sm:text-sm font-medium bg-white hover:bg-brand-teal hover:text-white text-brand-navy px-4 py-2 rounded-full border border-gray-200 shadow-sm transition-all duration-200">Laser Treatments</a>
+                </div>
+            </div>
+        </section>
 
-<section class="py-16 px-6 max-w-7xl mx-auto">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch justify-start">
-        <div class="bg-white rounded-[30px] overflow-hidden shadow-sm hover:shadow-lg transition-all h-full smooth-card reveal delay-100">
-            <img src="cosmetic dentistry.webp" alt="Cosmetic Dentistry" loading="lazy" class="h-56 w-full object-cover">
-            <div class="p-8">
-                <h3 class="text-xl font-bold text-brand-navy mb-3">Cosmetic & Aesthetics</h3>
-                <p class="text-gray-600 text-sm">Smile Design, Veneers, Teeth Whitening, and Composite Bonding.</p>
+        <!-- Detailed Services List -->
+        <section class="py-12 px-6 max-w-7xl mx-auto space-y-16">
+
+            <!-- 1. Cosmetic & Aesthetics -->
+            <div id="cosmetic" class="bg-white rounded-[36px] overflow-hidden shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-300 smooth-card reveal delay-100 scroll-mt-24">
+                <div class="grid grid-cols-1 lg:grid-cols-12 items-stretch">
+                    <div class="lg:col-span-5 relative overflow-hidden bg-slate-50 min-h-[280px] lg:min-h-[380px]">
+                        <img src="cosmetic dentistry.webp" alt="Cosmetic & Aesthetics" loading="lazy" class="w-full h-full object-cover">
+                    </div>
+                    <div class="lg:col-span-7 p-8 sm:p-10 lg:p-12 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-2 mb-2 text-brand-teal font-bold text-xs uppercase tracking-wider">
+                                <span class="w-2 h-2 rounded-full bg-brand-teal"></span> Service 01
+                            </div>
+                            <h2 class="text-2xl sm:text-3xl font-extrabold text-brand-navy mb-4 tracking-tight">Cosmetic & Aesthetics</h2>
+                            <p class="text-gray-600 leading-relaxed mb-6 text-base sm:text-lg">
+                                Restorative dental care and smile design to create a smile that looks more pleasing, aesthetic, and natural. Includes teeth whitening to lighten discolored teeth — done safely in-clinic or with a prescribed home kit.
+                            </p>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+                                <div class="flex items-center gap-3 text-sm text-gray-700">
+                                    <svg class="w-5 h-5 text-brand-teal shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    <span>Visible results in one visit</span>
+                                </div>
+                                <div class="flex items-center gap-3 text-sm text-gray-700">
+                                    <svg class="w-5 h-5 text-brand-teal shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    <span>Safe, dentist-supervised whitening</span>
+                                </div>
+                                <div class="flex items-center gap-3 text-sm text-gray-700">
+                                    <svg class="w-5 h-5 text-brand-teal shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    <span>Custom porcelain veneers & bonding</span>
+                                </div>
+                                <div class="flex items-center gap-3 text-sm text-gray-700">
+                                    <svg class="w-5 h-5 text-brand-teal shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    <span>Fully personalised smile plan</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pt-6 border-t border-gray-100 flex justify-end">
+                            <a href="contact.html?service=cosmetic" class="inline-flex items-center text-sm font-semibold bg-brand-teal text-white px-6 py-3 rounded-full hover:bg-teal-700 transition-colors shadow-sm">
+                                Book Consultation
+                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="bg-white rounded-[30px] overflow-hidden shadow-sm hover:shadow-lg transition-all h-full smooth-card reveal delay-150">
-            <img src="Restorative.webp" alt="Restorative Dentistry" loading="lazy" class="h-56 w-full object-cover">
-            <div class="p-8">
-                <h3 class="text-xl font-bold text-brand-navy mb-3">Restorative</h3>
-                <p class="text-gray-600 text-sm">Painless Root Canal (RCT), Crowns & Bridges, and Post & Core Buildups.</p>
+
+            <!-- 2. Restorative -->
+            <div id="restorative" class="bg-white rounded-[36px] overflow-hidden shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-300 smooth-card reveal delay-150 scroll-mt-24">
+                <div class="grid grid-cols-1 lg:grid-cols-12 items-stretch">
+                    <div class="lg:col-span-5 relative overflow-hidden bg-slate-50 min-h-[280px] lg:min-h-[380px]">
+                        <img src="Restorative.webp" alt="Restorative Dentistry" loading="lazy" class="w-full h-full object-cover">
+                    </div>
+                    <div class="lg:col-span-7 p-8 sm:p-10 lg:p-12 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-2 mb-2 text-brand-teal font-bold text-xs uppercase tracking-wider">
+                                <span class="w-2 h-2 rounded-full bg-brand-teal"></span> Service 02
+                            </div>
+                            <h2 class="text-2xl sm:text-3xl font-extrabold text-brand-navy mb-4 tracking-tight">Restorative Dentistry & Root Canal (RCT)</h2>
+                            <p class="text-gray-600 leading-relaxed mb-6 text-base sm:text-lg">
+                                A dental procedure involving removal of infected pulp tissue of the tooth and filling it with inert material. We also provide custom-fitted crowns and bridges as a fixed solution for missing or damaged teeth, returning your smile to its natural state.
+                            </p>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+                                <div class="flex items-center gap-3 text-sm text-gray-700">
+                                    <svg class="w-5 h-5 text-brand-teal shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    <span>Pain-free procedure</span>
+                                </div>
+                                <div class="flex items-center gap-3 text-sm text-gray-700">
+                                    <svg class="w-5 h-5 text-brand-teal shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    <span>Saves your natural tooth</span>
+                                </div>
+                                <div class="flex items-center gap-3 text-sm text-gray-700">
+                                    <svg class="w-5 h-5 text-brand-teal shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    <span>Custom-fitted crowns & bridges</span>
+                                </div>
+                                <div class="flex items-center gap-3 text-sm text-gray-700">
+                                    <svg class="w-5 h-5 text-brand-teal shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    <span>Long-lasting durability</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pt-6 border-t border-gray-100 flex justify-end">
+                            <a href="contact.html?service=restorative" class="inline-flex items-center text-sm font-semibold bg-brand-teal text-white px-6 py-3 rounded-full hover:bg-teal-700 transition-colors shadow-sm">
+                                Book Consultation
+                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="bg-white rounded-[30px] overflow-hidden shadow-sm hover:shadow-lg transition-all h-full smooth-card reveal delay-200">
-            <img src="Orthodontics.webp" alt="Orthodontics" loading="lazy" class="h-56 w-full object-cover">
-            <div class="p-8">
-                <h3 class="text-xl font-bold text-brand-navy mb-3">Orthodontics</h3>
-                <p class="text-gray-600 text-sm">Dental Implants, Clear Aligners, Conventional Braces, and Gum Surgeries.</p>
+
+            <!-- 3. Orthodontics -->
+            <div id="orthodontics" class="bg-white rounded-[36px] overflow-hidden shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-300 smooth-card reveal delay-200 scroll-mt-24">
+                <div class="grid grid-cols-1 lg:grid-cols-12 items-stretch">
+                    <div class="lg:col-span-5 relative overflow-hidden bg-slate-50 min-h-[280px] lg:min-h-[380px]">
+                        <img src="Orthodontics.webp" alt="Orthodontics and Braces" loading="lazy" class="w-full h-full object-cover">
+                    </div>
+                    <div class="lg:col-span-7 p-8 sm:p-10 lg:p-12 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-2 mb-2 text-brand-teal font-bold text-xs uppercase tracking-wider">
+                                <span class="w-2 h-2 rounded-full bg-brand-teal"></span> Service 03
+                            </div>
+                            <h2 class="text-2xl sm:text-3xl font-extrabold text-brand-navy mb-4 tracking-tight">Orthodontics</h2>
+                            <p class="text-gray-600 leading-relaxed mb-6 text-base sm:text-lg">
+                                Smile correction and enhancement through alignment of malposed teeth and correction of jaw discrepancies and asymmetries. We offer tried and tested metal braces as well as less noticeable tooth-coloured ceramic braces.
+                            </p>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+                                <div class="flex items-center gap-3 text-sm text-gray-700">
+                                    <svg class="w-5 h-5 text-brand-teal shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    <span>Corrects misaligned teeth & spacing</span>
+                                </div>
+                                <div class="flex items-center gap-3 text-sm text-gray-700">
+                                    <svg class="w-5 h-5 text-brand-teal shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    <span>Improves bite and jaw alignment</span>
+                                </div>
+                                <div class="flex items-center gap-3 text-sm text-gray-700">
+                                    <svg class="w-5 h-5 text-brand-teal shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    <span>Metal and tooth-coloured braces</span>
+                                </div>
+                                <div class="flex items-center gap-3 text-sm text-gray-700">
+                                    <svg class="w-5 h-5 text-brand-teal shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    <span>Suitable for teenagers and adults</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pt-6 border-t border-gray-100 flex justify-end">
+                            <a href="contact.html?service=orthodontics" class="inline-flex items-center text-sm font-semibold bg-brand-teal text-white px-6 py-3 rounded-full hover:bg-teal-700 transition-colors shadow-sm">
+                                Book Consultation
+                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="bg-white rounded-[30px] overflow-hidden shadow-sm hover:shadow-lg transition-all h-full smooth-card reveal delay-250">
-            <img src="Preventive.webp" alt="Preventive Care" loading="lazy" class="h-56 w-full object-cover">
-            <div class="p-8">
-                <h3 class="text-xl font-bold text-brand-navy mb-3">Preventive</h3>
-                <p class="text-gray-600 text-sm">Ultrasonic Cleaning & Polishing, Cavity Fillings, and Digital Checkups.</p>
+
+            <!-- 4. Preventive -->
+            <div id="preventive" class="bg-white rounded-[36px] overflow-hidden shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-300 smooth-card reveal delay-250 scroll-mt-24">
+                <div class="grid grid-cols-1 lg:grid-cols-12 items-stretch">
+                    <div class="lg:col-span-5 relative overflow-hidden bg-slate-50 min-h-[280px] lg:min-h-[380px]">
+                        <img src="Preventive.webp" alt="Preventive Dental Care" loading="lazy" class="w-full h-full object-cover">
+                    </div>
+                    <div class="lg:col-span-7 p-8 sm:p-10 lg:p-12 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-2 mb-2 text-brand-teal font-bold text-xs uppercase tracking-wider">
+                                <span class="w-2 h-2 rounded-full bg-brand-teal"></span> Service 04
+                            </div>
+                            <h2 class="text-2xl sm:text-3xl font-extrabold text-brand-navy mb-4 tracking-tight">Preventive Care & Digital X-Ray</h2>
+                            <p class="text-gray-600 leading-relaxed mb-6 text-base sm:text-lg">
+                                Everyday checkups and gentle ultrasonic cleaning to keep your teeth and gums healthy. We use digital X-ray sensors that replace traditional film, producing clear computer images with much lower radiation exposure.
+                            </p>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+                                <div class="flex items-center gap-3 text-sm text-gray-700">
+                                    <svg class="w-5 h-5 text-brand-teal shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    <span>Lower radiation exposure</span>
+                                </div>
+                                <div class="flex items-center gap-3 text-sm text-gray-700">
+                                    <svg class="w-5 h-5 text-brand-teal shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    <span>Instant, high-clarity imaging</span>
+                                </div>
+                                <div class="flex items-center gap-3 text-sm text-gray-700">
+                                    <svg class="w-5 h-5 text-brand-teal shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    <span>Removes plaque & tartar buildup</span>
+                                </div>
+                                <div class="flex items-center gap-3 text-sm text-gray-700">
+                                    <svg class="w-5 h-5 text-brand-teal shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    <span>Keeps teeth and gums healthy</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pt-6 border-t border-gray-100 flex justify-end">
+                            <a href="contact.html?service=preventive" class="inline-flex items-center text-sm font-semibold bg-brand-teal text-white px-6 py-3 rounded-full hover:bg-teal-700 transition-colors shadow-sm">
+                                Book Consultation
+                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="bg-white rounded-[30px] overflow-hidden shadow-sm hover:shadow-lg transition-all h-full smooth-card reveal delay-300">
-            <img src="paediatric dentistry.webp" alt="Pediatric Care" loading="lazy" class="h-56 w-full object-cover">
-            <div class="p-8">
-                <h3 class="text-xl font-bold text-brand-navy mb-3">Pediatric Care</h3>
-                <p class="text-gray-600 text-sm">Fluoride Application, Dental Sealants, Complete & Partial Dentures.</p>
+
+            <!-- 5. Pediatric Care -->
+            <div id="pediatric" class="bg-white rounded-[36px] overflow-hidden shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-300 smooth-card reveal delay-300 scroll-mt-24">
+                <div class="grid grid-cols-1 lg:grid-cols-12 items-stretch">
+                    <div class="lg:col-span-5 relative overflow-hidden bg-slate-50 min-h-[280px] lg:min-h-[380px]">
+                        <img src="paediatric dentistry.webp" alt="Pediatric Dental Care" loading="lazy" class="w-full h-full object-cover">
+                    </div>
+                    <div class="lg:col-span-7 p-8 sm:p-10 lg:p-12 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-2 mb-2 text-brand-teal font-bold text-xs uppercase tracking-wider">
+                                <span class="w-2 h-2 rounded-full bg-brand-teal"></span> Service 05
+                            </div>
+                            <h2 class="text-2xl sm:text-3xl font-extrabold text-brand-navy mb-4 tracking-tight">Pediatric Dental Care</h2>
+                            <p class="text-gray-600 leading-relaxed mb-6 text-base sm:text-lg">
+                                Early oral screening and gentle habit correction for kids, since most dental irregularities in children can be avoided if addressed early in a warm, welcoming environment.
+                            </p>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+                                <div class="flex items-center gap-3 text-sm text-gray-700">
+                                    <svg class="w-5 h-5 text-brand-teal shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    <span>Gentle, kid-friendly approach</span>
+                                </div>
+                                <div class="flex items-center gap-3 text-sm text-gray-700">
+                                    <svg class="w-5 h-5 text-brand-teal shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    <span>Early habit correction & screening</span>
+                                </div>
+                                <div class="flex items-center gap-3 text-sm text-gray-700">
+                                    <svg class="w-5 h-5 text-brand-teal shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    <span>Cavity prevention & sealants</span>
+                                </div>
+                                <div class="flex items-center gap-3 text-sm text-gray-700">
+                                    <svg class="w-5 h-5 text-brand-teal shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    <span>Builds positive dental habits</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pt-6 border-t border-gray-100 flex justify-end">
+                            <a href="contact.html?service=pediatric" class="inline-flex items-center text-sm font-semibold bg-brand-teal text-white px-6 py-3 rounded-full hover:bg-teal-700 transition-colors shadow-sm">
+                                Book Consultation
+                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-</section>
+
+            <!-- 6. Dental Implants -->
+            <div id="implants" class="bg-white rounded-[36px] overflow-hidden shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-300 smooth-card reveal delay-100 scroll-mt-24">
+                <div class="grid grid-cols-1 lg:grid-cols-12 items-stretch">
+                    <div class="lg:col-span-5 relative overflow-hidden bg-slate-50 min-h-[280px] lg:min-h-[380px]">
+                        <img src="dental implants.webp" alt="Dental Implants" loading="lazy" class="w-full h-full object-cover">
+                    </div>
+                    <div class="lg:col-span-7 p-8 sm:p-10 lg:p-12 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-2 mb-2 text-brand-teal font-bold text-xs uppercase tracking-wider">
+                                <span class="w-2 h-2 rounded-full bg-brand-teal"></span> Service 06
+                            </div>
+                            <h2 class="text-2xl sm:text-3xl font-extrabold text-brand-navy mb-4 tracking-tight">Dental Implants</h2>
+                            <p class="text-gray-600 leading-relaxed mb-6 text-base sm:text-lg">
+                                A surgical component that integrates with the jaw bone to support a dental prosthesis such as a crown, bridge, or denture. It is the permanent, natural-feeling way to replace missing teeth.
+                            </p>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+                                <div class="flex items-center gap-3 text-sm text-gray-700">
+                                    <svg class="w-5 h-5 text-brand-teal shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    <span>Permanent, natural-looking</span>
+                                </div>
+                                <div class="flex items-center gap-3 text-sm text-gray-700">
+                                    <svg class="w-5 h-5 text-brand-teal shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    <span>Restores full chewing function</span>
+                                </div>
+                                <div class="flex items-center gap-3 text-sm text-gray-700">
+                                    <svg class="w-5 h-5 text-brand-teal shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    <span>Preserves natural jaw bone</span>
+                                </div>
+                                <div class="flex items-center gap-3 text-sm text-gray-700">
+                                    <svg class="w-5 h-5 text-brand-teal shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    <span>Looks and feels like a natural tooth</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pt-6 border-t border-gray-100 flex justify-end">
+                            <a href="contact.html?service=implants" class="inline-flex items-center text-sm font-semibold bg-brand-teal text-white px-6 py-3 rounded-full hover:bg-teal-700 transition-colors shadow-sm">
+                                Book Consultation
+                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 7. Clear Aligners - Invisalign -->
+            <div id="aligners" class="bg-white rounded-[36px] overflow-hidden shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-300 smooth-card reveal delay-150 scroll-mt-24">
+                <div class="grid grid-cols-1 lg:grid-cols-12 items-stretch">
+                    <div class="lg:col-span-5 relative overflow-hidden bg-slate-50 min-h-[280px] lg:min-h-[380px]">
+                        <img src="clear aligners.webp" alt="Clear Aligners and Invisalign" loading="lazy" class="w-full h-full object-cover">
+                    </div>
+                    <div class="lg:col-span-7 p-8 sm:p-10 lg:p-12 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-2 mb-2 text-brand-teal font-bold text-xs uppercase tracking-wider">
+                                <span class="w-2 h-2 rounded-full bg-brand-teal"></span> Service 07
+                            </div>
+                            <h2 class="text-2xl sm:text-3xl font-extrabold text-brand-navy mb-4 tracking-tight">Clear Aligners - Invisalign</h2>
+                            <p class="text-gray-600 leading-relaxed mb-6 text-base sm:text-lg">
+                                The Invisalign System uses a series of custom-made, removable clear aligners to gently and predictably move your teeth into place — with no metal brackets or wires.
+                            </p>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+                                <div class="flex items-center gap-3 text-sm text-gray-700">
+                                    <svg class="w-5 h-5 text-brand-teal shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    <span>Nearly invisible — most people won't notice</span>
+                                </div>
+                                <div class="flex items-center gap-3 text-sm text-gray-700">
+                                    <svg class="w-5 h-5 text-brand-teal shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    <span>Removable for eating, brushing, and flossing</span>
+                                </div>
+                                <div class="flex items-center gap-3 text-sm text-gray-700">
+                                    <svg class="w-5 h-5 text-brand-teal shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    <span>Custom-fitted using 3D digital scanning</span>
+                                </div>
+                                <div class="flex items-center gap-3 text-sm text-gray-700">
+                                    <svg class="w-5 h-5 text-brand-teal shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    <span>More comfortable than traditional braces</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pt-6 border-t border-gray-100 flex justify-end">
+                            <a href="contact.html?service=aligners" class="inline-flex items-center text-sm font-semibold bg-brand-teal text-white px-6 py-3 rounded-full hover:bg-teal-700 transition-colors shadow-sm">
+                                Book Consultation
+                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 8. Advanced Laser Treatments -->
+            <div id="laser" class="bg-white rounded-[36px] overflow-hidden shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-300 smooth-card reveal delay-200 scroll-mt-24">
+                <div class="grid grid-cols-1 lg:grid-cols-12 items-stretch">
+                    <div class="lg:col-span-5 relative overflow-hidden bg-slate-50 min-h-[280px] lg:min-h-[380px]">
+                        <img src="laser treatment.webp" alt="Advanced Laser Treatments" loading="lazy" class="w-full h-full object-cover">
+                    </div>
+                    <div class="lg:col-span-7 p-8 sm:p-10 lg:p-12 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-2 mb-2 text-brand-teal font-bold text-xs uppercase tracking-wider">
+                                <span class="w-2 h-2 rounded-full bg-brand-teal"></span> Service 08
+                            </div>
+                            <h2 class="text-2xl sm:text-3xl font-extrabold text-brand-navy mb-4 tracking-tight">Advanced Laser Treatments</h2>
+                            <p class="text-gray-600 leading-relaxed mb-6 text-base sm:text-lg">
+                                Modern laser dental care for gentle gum contouring, deep sterilization, and soft-tissue treatments with minimal discomfort and fast healing.
+                            </p>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+                                <div class="flex items-center gap-3 text-sm text-gray-700">
+                                    <svg class="w-5 h-5 text-brand-teal shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    <span>Gentle, pain-free gum treatment</span>
+                                </div>
+                                <div class="flex items-center gap-3 text-sm text-gray-700">
+                                    <svg class="w-5 h-5 text-brand-teal shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    <span>Minimal bleeding with no stitches</span>
+                                </div>
+                                <div class="flex items-center gap-3 text-sm text-gray-700">
+                                    <svg class="w-5 h-5 text-brand-teal shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    <span>Faster healing and recovery</span>
+                                </div>
+                                <div class="flex items-center gap-3 text-sm text-gray-700">
+                                    <svg class="w-5 h-5 text-brand-teal shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    <span>Safe, precise modern technology</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pt-6 border-t border-gray-100 flex justify-end">
+                            <a href="contact.html?service=laser" class="inline-flex items-center text-sm font-semibold bg-brand-teal text-white px-6 py-3 rounded-full hover:bg-teal-700 transition-colors shadow-sm">
+                                Book Consultation
+                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Frequently Asked Questions Section (from reference) -->
+        <section class="py-16 px-6 bg-white border-y border-gray-100">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12 reveal">
+                    <h4 class="text-brand-teal font-bold uppercase tracking-wider text-xs mb-2">Got Questions?</h4>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-navy tracking-tight mb-3">
+                        Frequently Asked Questions
+                    </h2>
+                    <p class="text-gray-600 text-base sm:text-lg">
+                        Answers to what patients ask most before booking a treatment.
+                    </p>
+                </div>
+
+                <div class="space-y-4">
+                    <div class="bg-brand-light rounded-2xl p-6 border border-gray-100 reveal delay-100">
+                        <h3 class="font-bold text-brand-navy text-lg mb-2">How do I know which dental treatment is right for me?</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Book a consultation at our clinic and our dentist will examine your teeth, discuss your concerns, and recommend the most suitable treatment plan for your situation.
+                        </p>
+                    </div>
+
+                    <div class="bg-brand-light rounded-2xl p-6 border border-gray-100 reveal delay-150">
+                        <h3 class="font-bold text-brand-navy text-lg mb-2">Do you offer emergency dental treatment in Bengaluru?</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Yes — call us directly for urgent issues like severe pain, swelling, or a broken tooth, and we'll do our best to see you the same day at our clinic.
+                        </p>
+                    </div>
+
+                    <div class="bg-brand-light rounded-2xl p-6 border border-gray-100 reveal delay-200">
+                        <h3 class="font-bold text-brand-navy text-lg mb-2">How long does a typical dental treatment take?</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            It varies by procedure — a routine checkup or teeth whitening takes under an hour, while treatments like dental implants or orthodontics are completed over multiple visits.
+                        </p>
+                    </div>
+
+                    <div class="bg-brand-light rounded-2xl p-6 border border-gray-100 reveal delay-250">
+                        <h3 class="font-bold text-brand-navy text-lg mb-2">Is anesthesia used during dental procedures?</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            For procedures like root canal treatment or extractions, local anesthesia is used to keep you comfortable and pain-free throughout the treatment.
+                        </p>
+                    </div>
+
+                    <div class="bg-brand-light rounded-2xl p-6 border border-gray-100 reveal delay-300">
+                        <h3 class="font-bold text-brand-navy text-lg mb-2">How do I book a dental consultation in Bengaluru?</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Use the Book Appointment button on any page, or call our clinic directly at 096061 62828 and our team will schedule a convenient time for you.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-20 px-6 max-w-5xl mx-auto text-center reveal">
+            <div class="bg-gradient-to-br from-brand-navy to-[#13325c] rounded-[40px] p-10 sm:p-14 text-white shadow-xl relative overflow-hidden">
+                <div class="absolute -right-20 -bottom-20 w-64 h-64 bg-brand-teal/20 rounded-full blur-3xl pointer-events-none"></div>
+                <div class="relative z-10 max-w-2xl mx-auto">
+                    <h2 class="text-3xl sm:text-4xl font-extrabold mb-4 tracking-tight leading-tight">
+                        Not Sure Which Treatment You Need?
+                    </h2>
+                    <p class="text-gray-300 text-base sm:text-lg mb-8 leading-relaxed">
+                        Book a personal consultation with Dr. Karthiyayini Priya and get a treatment plan tailored to you at our Jakkur clinic in Bengaluru.
+                    </p>
+                    <div class="flex flex-col sm:flex-row justify-center gap-4">
+                        <a href="contact.html" class="inline-flex items-center justify-center bg-brand-teal text-white px-8 py-3.5 rounded-full font-semibold hover:bg-teal-600 transition-all shadow-lg hover:-translate-y-0.5">
+                            Book Appointment
+                            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </a>
+                        <a href="tel:09606162828" class="inline-flex items-center justify-center bg-white/10 hover:bg-white/20 text-white px-8 py-3.5 rounded-full font-semibold transition-all border border-white/20">
+                            Call 096061 62828
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
     </main>
 
@@ -112,7 +563,7 @@
                 <div class="bg-white inline-block p-4 rounded-xl mb-6">
                     <img src="Vibrant Smiles logo.png" alt="Vibrant Smiles Dental Clinic" class="h-12 w-auto object-contain">
                 </div>
-                <p class="text-gray-300 max-w-md">Experience the perfect blend of advanced dental technology and personalized attention. Our mission is to help you achieve a confident, healthy smile in a relaxing, comfortable environment.</p>
+                <p class="text-gray-300 max-w-md">Comprehensive dental care for children, adults, and senior citizens. Advanced technology for a healthier tomorrow.</p>
             </div>
             <div>
                 <h4 class="text-lg font-semibold mb-6">Quick Links</h4>
@@ -127,7 +578,8 @@
                 <h4 class="text-lg font-semibold mb-6">Clinic Info</h4>
                 <ul class="space-y-3 text-gray-300 text-sm">
                     <li class="flex items-start mb-2"><span class="mr-3">📍</span> 12, Anukriti Complex, BGS Layout, 2nd Floor, KV Jairam Rd, Jakkur, Bengaluru</li>
-                    <li class="flex items-center mb-2"><span class="mr-3">📞</span> 096061 62828</li>
+                    <li class="flex items-center mb-2"><span class="mr-3">📞</span> <a href="tel:09606162828" class="hover:text-brand-teal transition-colors">096061 62828</a></li>
+                    <li class="flex items-center mb-2"><span class="mr-3">✉️</span> <a href="mailto:vibrantsmilesjakkur@gmail.com" class="hover:text-brand-teal transition-colors">vibrantsmilesjakkur@gmail.com</a></li>
                     <li class="flex items-center"><span class="mr-3">🕒</span> Mon-Sat: 10:00 AM – 7:00 PM</li>
                 </ul>
             </div>
